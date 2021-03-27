@@ -16,8 +16,8 @@ int main()
 	size_t outbytes = sizeof out / sizeof out[0];
 
 	// определяется элемент cd, а также выполняется конвертация из UTF-8 в нужную кодировку
-	iconv_t cd = iconv_open("cp1251", "utf-8");
-	//iconv_t cd = iconv_open("koi8-r", "utf-8");
+	//iconv_t cd = iconv_open("cp1251", "utf-8");
+	iconv_t cd = iconv_open("koi8-r", "utf-8");
 	//iconv_t cd = iconv_open("iso-8859-5", "utf-8");
 
 	// подается cd, указатель на строку с входными данными, указатель на переменную с размером, указатель на выходной буфер и выходной размер
