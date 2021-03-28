@@ -26,7 +26,7 @@ cd "c-2021-01/03.Static data structures/homework/"
 make 
 ```
 
-Программа принимает варианты параметров:
+Программа принимает варианты параметров:  
 **source_file**: *./other/cp1251.txt*, *./other/koi8.txt*, *./other/iso-8859-5.txt*  
 **encoding**: *cp-1251*, *koi8*, *iso-8859-5*  
 
