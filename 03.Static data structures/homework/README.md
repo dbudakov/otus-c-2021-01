@@ -22,7 +22,7 @@
 
 ```sh
 git clone https://github.com/dbudakov/c-2021-01
-cd "c-2021-01/02.Static data structures/homework/"
+cd "c-2021-01/03.Static data structures/homework/"
 make 
 ```
 
@@ -32,6 +32,14 @@ make
 
 ```sh
 ./to_utf8 <source_file> <encoding> <output_file>
+
+./to_utf8 other/koi8.txt koi8 other/test1
+./to_utf8 other/cp1251.txt cp-1251 other/test2
+./to_utf8 other/iso-8859-5.txt iso-8859-5 other/test3
+
+diff other/test1 other/test2
+diff other/test1 other/test3
+cat other/test1
 ```
 
 ## Дополнительно
