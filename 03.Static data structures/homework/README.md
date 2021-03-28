@@ -51,5 +51,5 @@ cat other/test1
 ## Источники
 
 Обработка ошибок:  
-<https://habr.com/ru/post/324642/>
-<https://ru.wikipedia.org/wiki/Errno.h>
+<https://habr.com/ru/post/324642/>  
+<https://ru.wikipedia.org/wiki/Errno.h>  
