@@ -18,7 +18,7 @@
   
 ## Решение
 
-Сборка выполняется через **Makefile**, обрабатываются аргументы **all**, **clean**, **fclean**, **re**:
+Сборка выполняется через **Makefile** есть обработка ключей **all**, **clean**, **fclean**, **re**:
 
 ```sh
 git clone https://github.com/dbudakov/c-2021-01
@@ -26,17 +26,19 @@ cd "c-2021-01/03.Static data structures/homework/"
 make 
 ```
 
-Для проверки нужно выполнить со следующими параметрами:  
+Программа принимает варианты параметров:
 **source_file**: *./other/cp1251.txt*, *./other/koi8.txt*, *./other/iso-8859-5.txt*  
 **encoding**: *cp-1251*, *koi8*, *iso-8859-5*  
 
 ```sh
 ./to_utf8 <source_file> <encoding> <output_file>
 
+# check list
 ./to_utf8 other/koi8.txt koi8 other/test1
 ./to_utf8 other/cp1251.txt cp-1251 other/test2
 ./to_utf8 other/iso-8859-5.txt iso-8859-5 other/test3
 
+# check result
 diff other/test1 other/test2
 diff other/test1 other/test3
 cat other/test1
@@ -44,7 +46,7 @@ cat other/test1
 
 ## Дополнительно
 
-Не получилось реализовать полную таблицу символов включая не перчатные, требуется много времени чтобы прийти к решению как достать все коды для cp1251,koi8-r,iso-5589-5 соответсвтвующие кодам символов в диапазоне 127-255 для utf8.  
+Не получилось реализовать полную таблицу символов включая непечатные cимволы, потребуется время чтобы прийти к решению как достать все коды для cp1251, koi8-r, iso-5589-5 соответсвтвующие кодам символов в диапазоне 127-255 для utf8.  
 
 ## Источники
 
