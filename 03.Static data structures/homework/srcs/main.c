@@ -1,17 +1,9 @@
 #include "../includes/libft.h"
 
-/*
- * Программа обрабатывает кодировки cp1251, с кодами от 192 до 255, 
- * это ряды А-Я, а-я, т.е.
- * русский алфавит без спец символов (ё,№ и.т.д),
- * 
- * https://ru.wikipedia.org/wiki/Windows-1251#/media/\
- * %D0%A4%D0%B0%D0%B9%D0%BB:Windows-1251-upper-half.gif
- */
-
-int	main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-	int encoding;	
+
+	int encoding;
 
 	if (argc == 4)
 	{
@@ -22,9 +14,9 @@ int	main(int argc, char *argv[])
 		if (encoding == 1)
 			ft_cp1251(argv);
 		else if (encoding == 2)
-			printf("koi8\n");
+			ft_koi8(argv);
 		else if (encoding == 3)
-			printf("iso-8859-01\n");
+			ft_iso_8859_5(argv);
 		else
 			ft_error(argv, 95);
 	}

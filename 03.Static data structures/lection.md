@@ -199,6 +199,7 @@ Unicode и кодировки: <https://cyberforum.ru/blogs/33029/blog5139.html>
 Вывод _hexdecimal_ значения символа в нужной кодировке:  
 
 ```sh
+iconv -f utf8 -t cp1251 input_file -o output_file
 echo -n "а" | iconv -f utf8 -t cp1251 | hexdump -C
 echo -n "а" | hexdump -C
 ```
