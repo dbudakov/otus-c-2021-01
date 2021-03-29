@@ -12,7 +12,7 @@ int ft_koi8(char *argv[])
 	// open file read
 	if ((in_stream = fopen(argv[1], "r")) == NULL)
 	{
-		ft_error(argv, errno);
+		ft_error(argv, ERR_SRC_FILE);
 	}
 	a = getc(in_stream);
 	if (a == -1)
@@ -20,7 +20,7 @@ int ft_koi8(char *argv[])
 
 	if ((to_stream = fopen(argv[3], "w")) == NULL)
 	{
-		ft_error(argv, errno);
+		ft_error(argv, ERR_DEST_FILE);
 	}
 
 	while (a != -1)

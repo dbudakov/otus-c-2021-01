@@ -6,9 +6,12 @@ void ft_error(char *argv[], int error)
 	char *errorbuf;
 
 	errorbuf = strerror(error);
-	if (error == ERR_FILE)
+	if (error == ERR_SRC_FILE)
 		fprintf(stderr, "%s: %s: %s\n",
 				argv[0], argv[1], errorbuf);
+	if (error == ERR_DEST_FILE)
+		fprintf(stderr, "%s: %s: %s\n",
+				argv[0], argv[3], errorbuf);
 	if (error == ERR_SAME_FILE)
 		fprintf(stderr, "%s: '%s' and '%s' are the same file\n",
 				argv[0], argv[1], argv[3]);
