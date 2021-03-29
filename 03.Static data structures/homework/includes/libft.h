@@ -67,6 +67,7 @@ enum l_ERROR
 
 enum ENCODING
 {
+	E_ERR,
 	E_CP1251,
 	E_KOI8,
 	E_ISO8859_5
