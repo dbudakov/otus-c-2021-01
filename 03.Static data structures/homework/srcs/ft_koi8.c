@@ -4,7 +4,6 @@
 int ft_koi8(char *argv[])
 {
 	int a;
-	int b;
 	int num;
 	int buff;
 	FILE *in_stream;
@@ -17,16 +16,12 @@ int ft_koi8(char *argv[])
 	}
 	a = getc(in_stream);
 	if (a == -1)
-		ft_error(argv, 61);
+		ft_error(argv, ERR_EMPTY_FILE);
 
-	if ((to_stream = fopen(argv[3], "a+")) == NULL)
+	if ((to_stream = fopen(argv[3], "w")) == NULL)
 	{
 		ft_error(argv, errno);
 	}
-
-	b = getc(to_stream);
-	if (b != -1)
-		ft_error(argv, 1);
 
 	while (a != -1)
 	{
@@ -47,5 +42,5 @@ int ft_koi8(char *argv[])
 
 	fclose(in_stream);
 	fclose(to_stream);
-	return (0);
+	return 0;
 }

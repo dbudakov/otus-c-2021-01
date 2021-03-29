@@ -37,7 +37,7 @@ ${NAME}: ${LIB}
 	@${CC} ${FLAGS} ${MAIN} ${LIB} -o ${NAME}
 
 #${NAME}:
-#	cc srcs/ft_show.c includes/libft.h  srcs/ft_error.c
+#	cc srcs/add/ft_show.c includes/libft.h  srcs/ft_error.c
 
 ${LIB}: ${OBJ_S}
 	@${ARCHIVE} $@ ${OBJ_S}
