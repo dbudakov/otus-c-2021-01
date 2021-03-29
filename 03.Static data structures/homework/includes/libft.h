@@ -57,8 +57,7 @@ unsigned char iso_8859_5[] = {
 
 enum l_ERROR
 {
-	ERR_SRC_FILE = 1,
-	ERR_DEST_FILE = 3,
+	ERR_FILE = 2,
 	ERR_SAME_FILE = 5,
 	ERR_PERMISSION = 13,
 	ERR_ARG = 22,

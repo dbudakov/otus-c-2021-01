@@ -12,14 +12,17 @@ int ft_cp1251(char *argv[])
 
 	// Открытие файла в сторой кодировке, а именно cp1251
 	if ((in_stream = fopen(argv[1], "r")) == NULL)
-		ft_error(argv, ERR_SRC_FILE);
+		ft_error(argv, errno);
 
 	a = getc(in_stream);
 	if (a == -1)
 		ft_error(argv, ERR_EMPTY_FILE);
 
 	if ((to_stream = fopen(argv[3], "w")) == NULL)
-		ft_error(argv, ERR_DEST_FILE);
+	{
+		argv[1] = argv[3];
+		ft_error(argv, errno);
+	}
 
 	while (a != -1)
 	{

@@ -12,7 +12,7 @@ int ft_iso_8859_5(char *argv[])
 	// open file read
 	if ((in_stream = fopen(argv[1], "r")) == NULL)
 	{
-		ft_error(argv, ERR_SRC_FILE);
+		ft_error(argv, errno);
 	}
 	a = getc(in_stream);
 	if (a == -1)
@@ -20,7 +20,8 @@ int ft_iso_8859_5(char *argv[])
 
 	if ((to_stream = fopen(argv[3], "w")) == NULL)
 	{
-		ft_error(argv, ERR_DEST_FILE);
+		argv[1] = argv[3];
+		ft_error(argv, errno);
 	}
 
 	while (a != -1)
