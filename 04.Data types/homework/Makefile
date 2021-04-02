@@ -1,14 +1,12 @@
-NAME := to_utf8
+NAME := rarjpeg
 CC := gcc
 FLAGS := -Wall -Wextra -Wpedantic -std=c11
 FLAGS_C = ${FLAGS} -c
 
 SRC_DIR := ./srcs/
-SRC_FILES := ft_cp1251.c \
-				ft_koi8.c \
-				ft_error.c \
-				ft_iso_8859_5.c \
-				ft_check_encoding.c
+SRC_FILES := ft_error.c \
+				ft_check.c \
+				ft_rar.c
 
 
 SRC_S = $(addprefix ${SRC_DIR}, ${SRC_FILES})
@@ -33,11 +31,8 @@ CLEAN := rm -rf
 
 all: ${NAME}
 
-#${NAME}: ${LIB}
-#	@${CC} ${FLAGS} ${MAIN} ${LIB} -o ${NAME}
-
-${NAME}:
-	cc srcs/add/ft_show.c includes/libft.h  srcs/ft_error.c
+${NAME}: ${LIB}
+	@${CC} ${FLAGS} ${MAIN} ${LIB} -o ${NAME}
 
 ${LIB}: ${OBJ_S}
 	@${ARCHIVE} $@ ${OBJ_S}
