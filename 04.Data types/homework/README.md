@@ -44,13 +44,11 @@ make
 [qipu.ru](https://qipu.ru/tele2/sozdanie-polzovatelskogo-izvestnogo-tipa-faila-dlya-r-studio-signaturnye.html)  
 
 <sys/stat.h>  
-[pubs.opengroup.org](https://pubs.opengroup.org/onlinepubs/009604499/basedefs/sys/stat.h.html)  
-[opennet.ru](https://www.opennet.ru/cgi-bin/opennet/man.cgi?topic=stat&category=2)
+[pubs.opengroup.org](https://pubs.opengroup.org/onlinepubs/009604499/basedefs/sys/stat.h.html), [opennet.ru](https://www.opennet.ru/cgi-bin/opennet/man.cgi?topic=stat&category=2)
 
 Процесс:  
-[blog2k.ru](https://blog2k.ru/archives/3391#EOCD)  
-[blog2k.ru](https://blog2k.ru/archives/3392)  
+[blog2k.ru](https://blog2k.ru/archives/3391#EOCD), [blog2k.ru](https://blog2k.ru/archives/3392)  
 
-Проверка на чтение, но только владельца файла: [unix.com](https://www.unix.com/programming/24978-s_irusr.html)  
+Проверка на чтение, но только для владельца файла: [unix.com](https://www.unix.com/programming/24978-s_irusr.html)  
 
 
