@@ -20,7 +20,7 @@ git clone https://github.com/dbudakov/c-2021-01 dbudakov
 ```
 Перейти к каталогу с решением ДЗ
 ```sh
-cd dbudakov/04.Data\ types/homework/
+cd "dbudakov/04.Data types/homework/"
 ```
 Скомпилировать программу и запустить ее
 ```sh
