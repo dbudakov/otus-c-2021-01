@@ -15,24 +15,28 @@
 
 # Решение
 Для запуска нужно склонировать репозиторий 
-```bash
+```sh
 git clone https://github.com/dbudakov/c-2021-01 dbudakov
 ```
 Перейти к каталогу с решением ДЗ
-```
-cd otus_test/04.Data\ types/homework/
+```sh
+cd "dbudakov/04.Data types/homework/"
 ```
 Скомпилировать программу и запустить ее
-```
+```sh
 make
 ./rarjpeg files/non-zipjpeg.jpg
 ./rarjpeg files/zipjpeg.jpg
 ```
 
-
+## Примечания
+Корректно обрабатывает несколько аргументов
+```sh
+./rarjpeg files/non-zipjpeg.jpg files/non-zipjpeg.jpg
+```
 ## Дополнительно
 Сигнатуры первого включение архива в файл и конец jpeg файла:
-```
+```sh
 ./a.out files/zipjpeg.jpg |sed 's/255 217/255-217/g'|sed 's/ /\n/g'|grep -E '255-217' -no
 ```
 
@@ -40,13 +44,11 @@ make
 [qipu.ru](https://qipu.ru/tele2/sozdanie-polzovatelskogo-izvestnogo-tipa-faila-dlya-r-studio-signaturnye.html)  
 
 <sys/stat.h>  
-[pubs.opengroup.org](https://pubs.opengroup.org/onlinepubs/009604499/basedefs/sys/stat.h.html)  
-[opennet.ru](https://www.opennet.ru/cgi-bin/opennet/man.cgi?topic=stat&category=2)
+[pubs.opengroup.org](https://pubs.opengroup.org/onlinepubs/009604499/basedefs/sys/stat.h.html), [opennet.ru](https://www.opennet.ru/cgi-bin/opennet/man.cgi?topic=stat&category=2)
 
 Процесс:  
-[blog2k.ru](https://blog2k.ru/archives/3391#EOCD)  
-[blog2k.ru](https://blog2k.ru/archives/3392)  
+[blog2k.ru](https://blog2k.ru/archives/3391#EOCD), [blog2k.ru](https://blog2k.ru/archives/3392)  
 
-Проверка на чтение, но только владельца файла: [unix.com](https://www.unix.com/programming/24978-s_irusr.html)  
+Проверка на чтение, но только для владельца файла: [unix.com](https://www.unix.com/programming/24978-s_irusr.html)  
 
 
