@@ -15,24 +15,28 @@
 
 # Решение
 Для запуска нужно склонировать репозиторий 
-```bash
+```sh
 git clone https://github.com/dbudakov/c-2021-01 dbudakov
 ```
 Перейти к каталогу с решением ДЗ
-```
-cd otus_test/04.Data\ types/homework/
+```sh
+cd dbudakov/04.Data\ types/homework/
 ```
 Скомпилировать программу и запустить ее
-```
+```sh
 make
 ./rarjpeg files/non-zipjpeg.jpg
 ./rarjpeg files/zipjpeg.jpg
 ```
 
-
+## Примечания
+Корректно обрабатывает несколько аргументов
+```sh
+./rarjpeg files/non-zipjpeg.jpg files/non-zipjpeg.jpg
+```
 ## Дополнительно
 Сигнатуры первого включение архива в файл и конец jpeg файла:
-```
+```sh
 ./a.out files/zipjpeg.jpg |sed 's/255 217/255-217/g'|sed 's/ /\n/g'|grep -E '255-217' -no
 ```
 
