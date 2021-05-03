@@ -16,6 +16,14 @@
 #include <unistd.h>
 #include <stdint.h>
 
+# ifdef ERROR 
+unsigned int g_error = 0;
+
+# else
+extern unsigned int g_error;
+
+# endif
+
 void ft_error(char *argv[], int i, int error);
 int ft_check(int i, char *argv[]);
 int ft_rar(char *argv[], int i);

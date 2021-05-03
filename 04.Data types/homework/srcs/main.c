@@ -11,10 +11,11 @@ int main(int argc, char *argv[])
 	while (i < argc)
 	{
 		if (ft_check(i, argv))
-		{
 			ft_rar(argv, i);
-		}
-
+		if(!g_error)
+			if (i != (argc-1))
+				printf("\n");
 		i++;
 	}
+	return (g_error);
 }
