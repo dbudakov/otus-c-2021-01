@@ -48,16 +48,16 @@ int ft_get_cr(FILE *fd, struct CentralDirectoryFileHeader *S_CR, struct EOCD *S_
 		fread(S_CR, sizeof(*S_CR), 1, fd);
 		if (S_CR->signature != CR_SIGN)
 			return 0;
-
-		len = S_CR->filenameLength;
+		
+		// 2 байта, как я понял являются замыкающей сигнатуроя,
+		// которая уже является начлом следующей записи
+		len = (S_CR->filenameLength - 2);
 		while (len--)
 			printf("%c", fgetc(fd));
 		printf("\n");
 
-		// 2 байта, как я понял являются замыкающей сигнатуроя,
-		// которая уже является начлом следующей записи
 		if (S_CR->extraFieldLength)
-			fseek(fd, S_CR->extraFieldLength - 2, SEEK_CUR);
+			fseek(fd, S_CR->extraFieldLength , SEEK_CUR);
 
 		if (S_CR->fileCommentLength)
 			fseek(fd, S_CR->fileCommentLength, SEEK_CUR);
