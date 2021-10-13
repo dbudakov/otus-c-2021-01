@@ -51,7 +51,7 @@ int ft_get_cr(FILE *fd, struct CentralDirectoryFileHeader *S_CR, struct EOCD *S_
 		
 		// 2 байта, как я понял являются замыкающей сигнатуроя,
 		// которая уже является начлом следующей записи
-		len = (S_CR->filenameLength - 2);
+		len = (S_CR->filenameLength);
 		while (len--)
 			printf("%c", fgetc(fd));
 		printf("\n");
