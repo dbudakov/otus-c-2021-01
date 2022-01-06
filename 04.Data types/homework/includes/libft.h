@@ -39,6 +39,7 @@ enum l_ERROR
 
 };
 
+#pragma pack(1)
 struct EOCD
 {
 	// Обязательная сигнатура, равна 0x06054b50

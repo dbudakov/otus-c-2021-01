@@ -13,40 +13,57 @@
 Код компилируется без warning'ов с ключами компилятора -Wall -Wextra -Wpedantic -std=c11.
 Далее успешность определяется code review.
 
-# Решение
+## Решение
+
 Для запуска нужно склонировать репозиторий 
-```bash
+
+```sh
 git clone https://github.com/dbudakov/c-2021-01 dbudakov
 ```
+
 Перейти к каталогу с решением ДЗ
+
+```sh
+cd "dbudakov/04.Data types/homework/"
 ```
-cd otus_test/04.Data\ types/homework/
-```
+
 Скомпилировать программу и запустить ее
-```
+
+```sh
 make
 ./rarjpeg files/non-zipjpeg.jpg
 ./rarjpeg files/zipjpeg.jpg
 ```
 
+## Примечания
+
+Корректно обрабатывает несколько аргументов
+
+```sh
+./rarjpeg files/non-zipjpeg.jpg files/non-zipjpeg.jpg
+```
 
 ## Дополнительно
+
 Сигнатуры первого включение архива в файл и конец jpeg файла:
-```
+
+```sh
 ./a.out files/zipjpeg.jpg |sed 's/255 217/255-217/g'|sed 's/ /\n/g'|grep -E '255-217' -no
 ```
 
 ## Источники
+
 [qipu.ru](https://qipu.ru/tele2/sozdanie-polzovatelskogo-izvestnogo-tipa-faila-dlya-r-studio-signaturnye.html)  
 
 <sys/stat.h>  
-[pubs.opengroup.org](https://pubs.opengroup.org/onlinepubs/009604499/basedefs/sys/stat.h.html)  
-[opennet.ru](https://www.opennet.ru/cgi-bin/opennet/man.cgi?topic=stat&category=2)
+[pubs.opengroup.org](https://pubs.opengroup.org/onlinepubs/009604499/basedefs/sys/stat.h.html), [opennet.ru](https://www.opennet.ru/cgi-bin/opennet/man.cgi?topic=stat&category=2)
 
 Процесс:  
-[blog2k.ru](https://blog2k.ru/archives/3391#EOCD)  
-[blog2k.ru](https://blog2k.ru/archives/3392)  
+[blog2k.ru](https://blog2k.ru/archives/3391#EOCD), [blog2k.ru](https://blog2k.ru/archives/3392)  
 
-Проверка на чтение, но только владельца файла: [unix.com](https://www.unix.com/programming/24978-s_irusr.html)  
+Проверка на чтение, но только для владельца файла: [unix.com](https://www.unix.com/programming/24978-s_irusr.html)  
 
+## Code review
 
+- Выключить выравнивание в структурах через #pragma pack(1) [pragma.c](./notes/pragma.c)
+- Аккуратно проверять значения, прочитанные из файла (в этом может помочь вот такая вспомогательная функция: https://gist.github.com/ccbrown/9722406).
