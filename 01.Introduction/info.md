@@ -73,3 +73,6 @@ TIOBE proggramming Community Index: [link](http://www.tiobe.com/tiobe-index/)
 8. Клеменс Бен. Язык С в XXI веке
 9. Roberts C. Seacord. Effective C. San Francisco: No strach press. 2020
 10. Блум Джереми. Изучаем Arduino: инструменты и методы технического волшебства, 2015
+11. Н.Вирт. Алгоритмы + структуры данных = программы
+12. Р.Седжвик Фундаментальные алгоритмы на C.
+13. Д.Кнут. Основы программирования.

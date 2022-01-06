@@ -1,6 +1,7 @@
 #ifndef LIBFT_H
 #define LIBFT_H
 
+/* maybe don't need next 3 linex */
 #define CP1251 "cp1251"
 #define KOI8 "koi8"
 #define ISO8859_5 "iso-8859-5"
