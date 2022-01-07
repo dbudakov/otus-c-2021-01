@@ -1,10 +1,10 @@
 #ifndef LIBFT_H
 #define LIBFT_H
 
-#define ERR_MAX_CODE 132
 #define BUFF 250
 #define FORMAT ";"
 #define PROG_NAME "sorting"
+#define ERR_MAX_CODE 132
 
 #include <stdio.h>
 #include <math.h>
