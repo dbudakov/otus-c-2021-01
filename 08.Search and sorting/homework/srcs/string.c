@@ -1,6 +1,6 @@
 #include "../includes/libft.h"
 
-char *trimprefix(char *str, char *szwcstr)
+static char *trimprefix(char *str, char *szwcstr)
 {
 	int i;
 	int end;
@@ -14,7 +14,7 @@ char *trimprefix(char *str, char *szwcstr)
 	return &str[i];
 }
 
-char *trimsuffix(char *str, char *szwcstr)
+static char *trimsuffix(char *str, char *szwcstr)
 {
 	int i;
 
@@ -24,6 +24,11 @@ char *trimsuffix(char *str, char *szwcstr)
 	while (i >= 0 && strchr(szwcstr, str[i]))
 		str[i--] = '\0';
 	return str;
+}
+
+char *wordFormat(char *str)
+{
+	return trimsuffix(trimprefix(str, FORMAT), FORMAT);
 }
 
 char *ft_strdup(char *str)
@@ -43,11 +48,4 @@ char *ft_strdup(char *str)
 	i++;
 	dup[i] = '\0';
 	return dup;
-}
-
-char *wordFormat(char *str)
-{
-	trimprefix(str, FORMAT);
-	trimsuffix(str, FORMAT);
-	return str;
 }
