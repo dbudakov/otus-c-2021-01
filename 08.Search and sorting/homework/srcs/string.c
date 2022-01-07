@@ -29,20 +29,20 @@ char *trimsuffix(char *str, char *szwcstr)
 char *ft_strdup(char *str)
 {
 	int i;
-	char *dub;
+	char *dup;
 	if (!str)
 		return NULL;
 
 	i = 0;
-	dub = (char *)malloc(strlen(str) + 1);
+	dup = (char *)malloc(strlen(str) + 1);
 	while (str[i])
 	{
-		dub[i] = str[i];
+		dup[i] = str[i];
 		i++;
 	}
 	i++;
-	dub[i] = '\0';
-	return dub;
+	dup[i] = '\0';
+	return dup;
 }
 
 char *wordFormat(char *str)

@@ -35,21 +35,7 @@ void inorder(struct node *root)
 		return;
 	inorder(root->left);
 	printf("%-10d, %-10s: %d\n", root->index, root->key, root->value);
+	free(root->key);
+	free(root);
 	inorder(root->right);
 }
-
-// int main()
-// {
-// 	struct node *root = NULL;
-// 	root = insert(root, hash("hello"), "hello");
-// 	insert(root, hash("hello1"), "hello1");
-// 	insert(root, hash("hello2"), "hello2");
-// 	insert(root, hash("hello3"), "hello3");
-// 	insert(root, hash("hello6"), "hello6");
-// 	insert(root, hash("hello6"), "hello6");
-// 	insert(root, hash("hello6"), "hello6");
-// 	insert(root, hash("hello7"), "hello7");
-// 	insert(root, hash("hello8"), "hello8");
-// 	inorder(root);
-// 	printf("\n");
-// }
