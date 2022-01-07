@@ -3,8 +3,8 @@
 
 #define ERR_MAX_CODE 132
 #define BUFF 250
-// #define ERROR
-// #define ERR_ARG "./sorgting <file>"
+#define FORMAT ";"
+#define PROG_NAME "sorting"
 
 #include <stdio.h>
 #include <math.h>
@@ -14,13 +14,27 @@
 #include <string.h>
 #include <locale.h>
 
-size_t hash(char *v);
-void ft_error(char *argv[], size_t error);
+struct node
+{
+	int index;
+	int value;
+	char *key;
+	struct node *left;
+	struct node *right;
+};
 
+size_t hash(char *v);
+void ft_error(size_t error);
+
+char *ft_strdup(char *str);
 char *trimprefix(char *str, char *szwcstr);
 char *trimsuffix(char *str, char *szwcstr);
-
+char *wordFormat(char *str);
 FILE *openread(char *argv[], FILE *fp);
+
+struct node *insert(struct node *root, int index, char *key);
+void inorder(struct node *root);
+struct node *createNode(int index, char *key);
 
 enum l_ERROR
 {

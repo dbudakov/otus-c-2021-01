@@ -7,7 +7,8 @@ SRC_DIR := ./srcs/
 SRC_FILES := hash.c \
 						ft_error.c \
 						string.c \
-						files.c
+						files.c \
+						btree.c
 
 
 SRC_S = $(addprefix ${SRC_DIR}, ${SRC_FILES})
