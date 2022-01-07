@@ -39,11 +39,6 @@ struct node *createNode(int index, char *key);
 enum l_ERROR
 {
 	ERR_ARG = 132,
-	// ERR_SAME_FILE = 5,
-	// ERR_PERMISSION = 13,
-	// ERR_ARG = 22,
-	// ERR_EMPTY_FILE = 61,
-	// ERR_ENCODING = 95
 };
 
 #endif
