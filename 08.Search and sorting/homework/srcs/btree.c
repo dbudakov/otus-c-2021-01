@@ -1,3 +1,5 @@
+/*https://evileg.com/ru/post/491/*/
+
 #include "../includes/libft.h"
 
 struct node *createNode(int index, char *key)
