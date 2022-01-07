@@ -22,5 +22,6 @@ int main(int argc, char *argv[])
 	}
 	printf("%-11s %-10s %s\n", "hash", "key", "value");
 	inorder(root);
+	fclose(input);
 	return 0;
 }
