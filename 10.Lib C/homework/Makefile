@@ -1,4 +1,4 @@
-NAME := wheater
+NAME := weather
 CC := gcc
 LD_CURL = `curl-config --libs`
 LD_JSON = `pkg-config --cflags --libs libcjson`

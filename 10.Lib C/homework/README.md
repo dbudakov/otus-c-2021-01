@@ -22,5 +22,5 @@
 git clone https://github.com/dbudakov/otus-c-2021-09
 cd "otus-c-2021-09/10.Lib C/homework"
 make all
-./wheather "new york"
+./weather "new york"
 ```
