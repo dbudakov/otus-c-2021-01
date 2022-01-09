@@ -13,5 +13,5 @@
 git clone https://github.com/dbudakov/otus-c-2021-09
 cd "otus-c-2021-09/08.Search and sorting/homework"
 make all
-./sorting file
+./sorting /files/file
 ```

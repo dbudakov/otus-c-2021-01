@@ -13,6 +13,3 @@ repl.it - онлайн среда для компиляции
 ## lib
 
 <glib.h>
-
-## links
-[systutorials](https://www.systutorials.com/docs/linux/man/1-gst-launch-1.0/)  
